@@ -162,11 +162,24 @@
                 </li>
               </ul>
             </p>
+            <p>
+              <ul>
+                  <li>
+                    <strong class="custom-tooltip-video9"><a href="javascript:;">Pink Floyd – “A great day for freedom” (1994)</a></strong>
+                    <p>
+                      Uma das músicas mais recentes a tirar inspiração do muro de Berlim. Os Pink Floyd cantam  o impacto da queda do muro na sociedade, tecendo criticas à sua evolução, ao rumo que a sociedade tomou desde esse momento.
+                    </p>
+                </li>
+              </ul>
+            </p>
             </div>
 
             <div class="blog-post">
               <h4>Times of crisis are always prolific times for art and the fall of the Berlin wall is no exception. The cinema did not ignore the subject and portrayed it from several perspectives, from the thriller to the comedy, through the novel and the suspense.</h4>
               <h2 class="blog-post-title">Movies List</h2>
+              <h3 class="pb-4 mb-4 font-italic border-bottom">
+                
+              </h3>
               <p>
                 <ul>
                     <li>
@@ -334,6 +347,15 @@
             interactive: true,
             functionBefore: function(instance, helper){
               instance.content('<iframe width="700" height="500" src="https://www.youtube.com/embed/lRrY5u8lF0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');            
+          }
+        });
+        $(".custom-tooltip-video9").tooltipster({
+            maxWidth: 300,
+            trigger: 'click',
+            contentAsHTML: true,
+            interactive: true,
+            functionBefore: function(instance, helper){
+              instance.content('<iframe width="700" height="500" src="https://www.youtube.com/embed/SHuI_FWCoPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');            
           }
         });
       });
