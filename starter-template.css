@@ -1,0 +1,80 @@
+body {
+  padding-top: 3rem;
+  background-color: rgba(235, 235, 235, 0.363);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+}
+/* .blog-header-logo {
+  font-family: "Playfair Display", Georgia, "Times New Roman", serif;
+  font-size: 2.25rem;
+} */
+.nav-link:hover {
+  color: #bd2130 !important;
+}
+.top-section {
+  background-image: url(assets/img/imagem_queda.jpg);
+  background-repeat: repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    -webkit-animation: backgroundScroll 25s linear 1;
+    -webkit-animation-fill-mode: forwards;
+    animation: backgroundScroll 25s linear 1;
+    animation-fill-mode: forwards;
+}
+@keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -0px -180px;}
+}
+@-webkit-keyframes backgroundScroll {
+  from {background-position: 0 0;}
+  to {background-position: -0px -180px;}
+}
+.starter-template {
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.list-group-item:hover {
+  background-color: #bd2130;
+  color: aliceblue;
+}
+
+.list-group-item:hover a {
+  color: aliceblue;
+}
+
+.list-group-item:hover .fa-arrow-alt-circle-right {
+  color: aliceblue;
+}
+
+.botoes button {
+  margin-bottom: 10px;
+}
+.botoes a {
+  color: black;
+}
+
+/* .botoes a:hover {
+  color: #bd2130;
+} */
+.fa-arrow-alt-circle-right:hover {
+  color: #bd2130;
+}
+
+.tooltip_templates { display: none; }
+
+/* .preto {
+  background-color: black;
+}
+.amarelo {
+  background-color: yellow;
+}
+.vermelho {
+  background-color: red;
+} */
