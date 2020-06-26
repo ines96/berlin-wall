@@ -265,18 +265,7 @@
     ></script>
 
     <script>
-      $(function () {
-        $('#btnExp').on('click', function (ele) {
-            var v1 ='<video width="600" autoplay controls muted style="margin: 0 auto; display: block; vertical-align: middle; border-style: none;"><source src="assets/media/Video com explicação.mp4" type="video/mp4"></video>';            
-          $('#FeatureVideo').html(v1)
-        });
-
-        $('#btnSemExp').on('click', function (ele) {
-          var v2 = '<video width="600" autoplay controls muted style="margin: 0 auto; display: block; vertical-align: middle; border-style: none;"><source src="assets/media/Video sem explicação.mp4" type="video/mp4"></video>';
-          $('#FeatureVideo').html(v2)
-        });
-        
-
+      $(function () {       
         $(".custom-tooltip-video1").tooltipster({
             maxWidth: 300,
             trigger: 'click',
