@@ -29,8 +29,21 @@
         user-select: none;
       }
 
-      img {
+      .FeatureFrame {
         margin: 0 auto;
+        display: block;
+        vertical-align: middle;
+        border-style: none;
+        height: 450px;
+        width: 800px;
+      }
+
+      #btnExp {
+        margin-left: 45px;
+      }
+
+      #btnSemExp {
+        margin-left: 5px;
       }
 
       @media (min-width: 768px) {
@@ -50,7 +63,7 @@
           alt=""
           width="32"
           height="32"
-          title="Belim Wall"
+          title="Berlim Wall"
         />
         <button
           class="navbar-toggler"
@@ -67,9 +80,7 @@
         <div class="collapse navbar-collapse" id="navbarsExampleDefault">
           <ul class="navbar-nav mr-auto">
             <li class="nav-item">
-              <a class="nav-link" href="index.html"
-                >Home <span class="sr-only">(current)</span></a
-              >
+              <a class="nav-link" href="index.html"> Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item ">
               <a class="nav-link" href="photo-album.html">Photo Album</a>
@@ -93,26 +104,31 @@
             <div class="modal-dialog">
               <div class="modal-content">
                 <div class="modal-header">
-                  <h5 class="modal-title" id="exampleModalLabel">Escolha</h5>
+                  <h5 class="modal-title" id="exampleModalLabel">Choose</h5>
                   <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                   </button>
                 </div>
                 <div class="modal-body">
-                  <button id="btnSemExp" type="button" class="btn btn-primary" data-dismiss="modal">Vídeo sem explicação</button>
-                  <button id="btnExp" type="button" class="btn btn-secondary" data-dismiss="modal">Vídeo com explicação</button>
+                  <button id="btnSemExp" type="button" class="btn btn-primary" data-dismiss="modal">Non Interactive Explanation</button>
+                  <button id="btnExp" type="button" class="btn btn-secondary" data-dismiss="modal">Interactive Explanation</button>
                 </div>
               </div>
             </div>
           </div>
 
+          <br>
           <p>
+            <h4>In the video below, you can watch a small video summing up the history of the Berlin Wall, in which you can choose to watch the video with an interactive explanation or only with a voice explanation.</h4>
+            <h3 class="pb-4 mb-4 font-italic border-bottom">
+              
+            </h3>
             <div id="FeatureVideo">
-              <img src="assets/img/video-thumb.jpg" data-toggle="modal" data-target="#modalEscolha"/>
+              <img class="FeatureFrame" src="assets/img/video-thumb-youtube.jpg" data-toggle="modal" data-target="#modalEscolha"/>
             </div>
             
           </p>
-                    
+          <br>     
           <div class="col-md blog-main">
             <h4>From the 70s until the end of the century, several artists expressed their opinion regarding the Berlin Wall. Pink Floyd, David Bowie and Scorpions, for example, sang about the German barrier, with some of these songs becoming an unavoidable landmark in history.
             </h4>
@@ -137,7 +153,7 @@
                     <li>
                       <strong class="custom-tooltip-video3"><a href="javascript:;">David Bowie – “Heroes” (1977)</a></strong>
                       <p>
-                      À voz inconfundível de David Bowie juntam-se canções marcantes numa carreira com mais de 40 anos. “Heroes “, um dos três álbuns dedicados à cidade de Berlim e o single com o mesmo nome e que retrata uma história de amor dividida pelo muro são um exemplo dessas canções.
+                        To the unmistakable voice of David Bowie are added striking songs in a career with more than 40 years. "Heroes", one of the three albums dedicated to the city of Berlin and the single with the same name and which depicts a love story divided by the wall are an example of these songs.
                       </p>
                   </li>
                 </ul>
@@ -147,7 +163,7 @@
                   <li>
                     <strong class="custom-tooltip-video4"><a href="javascript:;">Pink Floyd – “Another Brick in the Wall” (1979)</a></strong>
                     <p>
-                    Uma banda que dispensa apresentações, os Pink Floyd marcaram a história com várias músicas que se tornaram em autênticos hinos. “Another Brick in the Wall ” é um dos exemplos claros do impacto da banda. Tanto a faixa como o próprio álbum devem o nome ao muro de Berlim.
+                      A band that needs no introduction, Pink Floyd marked history with several songs that have become authentic hymns. "Another Brick in the Wall" is one of the clear examples of the band's impact. Both the track and the album itself owe their name to the Berlin Wall.
                     </p>
                 </li>
               </ul>
@@ -157,22 +173,36 @@
                   <li>
                     <strong class="custom-tooltip-video5"><a href="javascript:;">Scorpions – “Wind of Change” (1991)</a></strong>
                     <p>
-                    Uma das músicas mais icónicas do último século, quer pelas implicações simbólicas presentes na letras, quer pela música. “Wind of Change ” é marcada por uma forte opinião acerca das mudanças que advém da queda do muro de Berlim.
+                      One of the most iconic songs of the last century, both for the symbolic implications present in the lyrics and for the music. “Wind of Change” is marked by a strong opinion about the changes that come from the fall of the Berlin Wall.
+                    </p>
+                </li>
+              </ul>
+            </p>
+            <p>
+              <ul>
+                  <li>
+                    <strong class="custom-tooltip-video9"><a href="javascript:;">Pink Floyd – “A great day for freedom” (1994)</a></strong>
+                    <p>
+                      One of the most recent songs to draw inspiration from the Berlin wall. Pink Floyd sing the impact of the fall of the wall on society, criticizing its evolution, the direction that society has taken since that moment.
                     </p>
                 </li>
               </ul>
             </p>
             </div>
+            <br>
 
             <div class="blog-post">
               <h4>Times of crisis are always prolific times for art and the fall of the Berlin wall is no exception. The cinema did not ignore the subject and portrayed it from several perspectives, from the thriller to the comedy, through the novel and the suspense.</h4>
+              <h3 class="pb-4 mb-4 font-italic border-bottom">
+                
+              </h3>
               <h2 class="blog-post-title">Movies List</h2>
               <p>
                 <ul>
                     <li>
                       <strong class="custom-tooltip-video8"><a href="javascript:;">“The Legend of Rita” (2000)</a></strong>
                       <p>
-                        Rita Vogt é uma terrorista radical da Alemanha Ocidental que abandona a revolução e instala-se do outro lado do muro com uma nova identidade. A película mosta que, contudo, vive no medo permanente de ser descoberta, o que acontece após a reunificação alemã.
+                        Rita Vogt is a radical West German terrorist who abandons the revolution and settles on the other side of the wall with a new identity. The film must, however, live in the permanent fear of being discovered, which happens after German reunification.
                       </p>
                   </li>
                 </ul>
@@ -192,7 +222,7 @@
                     <li>
                       <strong class="custom-tooltip-video6"><a href="javascript:;">“Good Bye, Lenin!” (2003)</a></strong>
                       <p>
-                      “Adeus, Lenine!” acompanha um jovem que, para tentar proteger a sanidade da sua mãe socialista, após esta ter estado em coma durante meses, esconde a queda do muro de Berlim e a implantação de uma sociedade capitalista do conhecimento desta.
+                        "Goodbye, Lenine!" accompanies a young man who, in an attempt to protect the health of his socialist mother, after having been in a coma for months, hides the fall of the Berlin wall and the establishment of a capitalist society with the knowledge of it.
                       </p>
                   </li>
                 </ul>
@@ -202,7 +232,7 @@
                   <li>
                     <strong class="custom-tooltip-video7"><a href="javascript:;">“Herr Lehmann” (2003)</a></strong>
                     <p>
-                    Frank Lehmann é um bartender que trabalha em Kreuzberg, junto de uma subcultura de estudantes, artistas e boémios. A história passa-se nas semanas anteriores à queda do muro de Berlim e próximo do 30.º aniversário de Frank, e o seu estilo de vida calmo é interrompido pela sua relação com Katrin, o enlouquecimento do seu melhor amigo, Karl, e uma visita dos seus pais.
+                      Frank Lehmann is a bartender who works in Kreuzberg, alongside a subculture of students, artists and bohemians. The story takes place in the weeks before the fall of the Berlin Wall and close to Frank's 30th birthday, and his calm lifestyle is interrupted by his relationship with Katrin, the madness of his best friend, Karl, and a visit from your parents.
                     </p>
                 </li>
               </ul>
@@ -247,12 +277,12 @@
     <script>
       $(function () {
         $('#btnExp').on('click', function (ele) {
-            var v1 ='<video width="600" autoplay controls muted><source src="assets/media/Video com explicação.mp4" type="video/mp4"></video>';            
+            var v1 ='<video width="600" autoplay controls muted style="margin: 0 auto; display: block; vertical-align: middle; border-style: none;"><source src="assets/media/Video com explicação.mp4" type="video/mp4"></video>';            
           $('#FeatureVideo').html(v1)
         });
 
         $('#btnSemExp').on('click', function (ele) {
-          var v2 = '<video width="600" autoplay controls muted><source src="assets/media/Video sem explicação.mp4" type="video/mp4"></video>';
+          var v2 = '<video width="600" autoplay controls muted style="margin: 0 auto; display: block; vertical-align: middle; border-style: none;"><source src="assets/media/Video sem explicação.mp4" type="video/mp4"></video>';
           $('#FeatureVideo').html(v2)
         });
         
@@ -334,6 +364,15 @@
             interactive: true,
             functionBefore: function(instance, helper){
               instance.content('<iframe width="700" height="500" src="https://www.youtube.com/embed/lRrY5u8lF0A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');            
+          }
+        });
+        $(".custom-tooltip-video9").tooltipster({
+            maxWidth: 300,
+            trigger: 'click',
+            contentAsHTML: true,
+            interactive: true,
+            functionBefore: function(instance, helper){
+              instance.content('<iframe width="700" height="500" src="https://www.youtube.com/embed/SHuI_FWCoPU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>');            
           }
         });
       });
