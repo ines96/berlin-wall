@@ -191,10 +191,10 @@ function initializeCP()
 						{
 							//console.log("js loaded");
 
-							var imagesJSONFiles = [ 'assets/dr/imgmd.json' ];
+							var imagesJSONFiles = [ 'dr/imgmd.json' ];
 							cpXHRJSLoader.loadImagesJSON(imagesJSONFiles,function(imageToJSONPathMap){
 								cp.imageToJSONPathMap = imageToJSONPathMap;
-								var imageJSONFiles = [ 'assets/dr/img1.json','assets/dr/img2.json','assets/dr/img3.json','assets/dr/img4.json','assets/dr/img5.json' ];
+								var imageJSONFiles = [ 'dr/img1.json','dr/img2.json','dr/img3.json','dr/img4.json','dr/img5.json' ];
 								if(window.location.protocol.substr(0,4) == "file")
 									cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
 								lJSLoaded = true;
