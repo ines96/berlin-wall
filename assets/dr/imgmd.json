@@ -1,0 +1,11 @@
+cp.imagesJSONCacheForLocal=true;cp.imageToJSONPathMap={ 
+"dr/10791_939_626.png": "img1.json",
+"dr/11627_940_627.png": "img1.json",
+"dr/11627_942_628.png": "img2.json",
+"dr/11955_939_626.png": "img3.json",
+"dr/11955_940_627.png": "img3.json",
+"dr/12354_939_626.png": "img4.json",
+"dr/12500_939_626.png": "img4.json",
+"dr/12500_941_627.png": "img5.json",
+"dr/berlin_wall.png": "img5.json",
+"___":"___"};
