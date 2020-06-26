@@ -113,125 +113,76 @@
     <div id="initialLoading"></div>
     <br />
     <br />
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
-      <div class="container d-flex justify-content-between">
-        <img
-          src="assets/img/germany2.svg"
-          alt=""
-          width="32"
-          height="32"
-          title="Belim Wall"
-        />
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-toggle="collapse"
-          data-target="#navbarsExampleDefault"
-          aria-controls="navbarsExampleDefault"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarsExampleDefault">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item active">
-              <a class="nav-link" href="index.html"
-                >Home <span class="sr-only">(current)</span></a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="photo-album.html">Photo Album</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="songs-movies.html">Songs/Movies</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Interactive Video</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-      <br />
-      <br />
-    </nav>
-    <h4>
-      In the video below, you can watch a small video summing up the history of
-      the Berlin Wall, in which you can choose to watch the video with an
-      interactive explanation or only with a voice explanation.
-    </h4>
-    <h3 class="pb-4 mb-4 font-italic border-bottom"></h3>
+    <script>
+      (function () {
+        if (document.documentMode < 9) {
+          document.body.innerHTML = "";
+          document.write(
+            "The content you are trying to view is not supported in the current Document Mode of Internet Explorer. Change the Document Mode to Internet Explorer 9 Standards and try to view the content again.<br>To change the Document Mode, press F12, click Document Mode: <current mode>, and then select Internet Explorer 9 Standards."
+          );
+          return;
+        }
+        window.addEventListener(
+          "load",
+          function () {
+            setTimeout(function () {
+              var script = document.createElement("script");
+              script.type = "text/javascript";
+              script.src = "assets/js/CPXHRLoader.js";
+              script.defer = "defer";
+              script.onload = function () {
+                var lCSSLoaded = false;
+                var lJSLoaded = false;
+                function constructDIVs() {
+                  if (lCSSLoaded && lJSLoaded) {
+                    initializeCP();
+                  }
+                }
+                cpXHRJSLoader.css("assets/css/CPLibraryAll.css", function () {
+                  lCSSLoaded = true;
+                  constructDIVs();
+                });
+                var lJSFiles = [
+                  "assets/js/jquery-3.3.1.min.js",
+                  "assets/js/CPM.js",
+                  "assets/playbar/playbarScript.js",
+                ];
+                cpXHRJSLoader.js(lJSFiles, function () {
+                  //console.log("js loaded");
 
+                  var imagesJSONFiles = ["dr/imgmd.json"];
+                  cpXHRJSLoader.loadImagesJSON(imagesJSONFiles, function (
+                    imageToJSONPathMap
+                  ) {
+                    cp.imageToJSONPathMap = imageToJSONPathMap;
+                    var imageJSONFiles = [
+                      "dr/img1.json",
+                      "dr/img2.json",
+                      "dr/img3.json",
+                      "dr/img4.json",
+                      "dr/img5.json",
+                    ];
+                    if (window.location.protocol.substr(0, 4) == "file")
+                      cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
+                    lJSLoaded = true;
+                    if (
+                      window.location.protocol.substr(0, 4) != "file" ||
+                      !imageJSONFiles.length
+                    )
+                      constructDIVs();
+                  });
+                });
+              };
+              document.getElementsByTagName("head")[0].appendChild(script);
+            }, 1);
+          },
+          false
+        );
+      })();
+    </script>
     <noscript style="text-align: center; font-size: 24px;"
       >Enable Javascript support in the browser.</noscript
     >
   </body>
 </html>
-<script>
-  (function () {
-    if (document.documentMode < 9) {
-      document.body.innerHTML = "";
-      document.write(
-        "The content you are trying to view is not supported in the current Document Mode of Internet Explorer. Change the Document Mode to Internet Explorer 9 Standards and try to view the content again.<br>To change the Document Mode, press F12, click Document Mode: <current mode>, and then select Internet Explorer 9 Standards."
-      );
-      return;
-    }
-    window.addEventListener(
-      "load",
-      function () {
-        setTimeout(function () {
-          var script = document.createElement("script");
-          script.type = "text/javascript";
-          script.src = "assets/js/CPXHRLoader.js";
-          script.defer = "defer";
-          script.onload = function () {
-            var lCSSLoaded = false;
-            var lJSLoaded = false;
-            function constructDIVs() {
-              if (lCSSLoaded && lJSLoaded) {
-                initializeCP();
-              }
-            }
-            cpXHRJSLoader.css("assets/css/CPLibraryAll.css", function () {
-              lCSSLoaded = true;
-              constructDIVs();
-            });
-            var lJSFiles = [
-              "assets/js/jquery-3.3.1.min.js",
-              "assets/js/CPM.js",
-              "assets/playbar/playbarScript.js",
-            ];
-            cpXHRJSLoader.js(lJSFiles, function () {
-              //console.log("js loaded");
-
-              var imagesJSONFiles = ["dr/imgmd.json"];
-              cpXHRJSLoader.loadImagesJSON(imagesJSONFiles, function (
-                imageToJSONPathMap
-              ) {
-                cp.imageToJSONPathMap = imageToJSONPathMap;
-                var imageJSONFiles = [
-                  "dr/img1.json",
-                  "dr/img2.json",
-                  "dr/img3.json",
-                  "dr/img4.json",
-                  "dr/img5.json",
-                ];
-                if (window.location.protocol.substr(0, 4) == "file")
-                  cpXHRJSLoader.preloadURLs(imageJSONFiles, constructDIVs);
-                lJSLoaded = true;
-                if (
-                  window.location.protocol.substr(0, 4) != "file" ||
-                  !imageJSONFiles.length
-                )
-                  constructDIVs();
-              });
-            });
-          };
-          document.getElementsByTagName("head")[0].appendChild(script);
-        }, 1);
-      },
-      false
-    );
-  })();
-</script>
